@@ -1,0 +1,41 @@
+query pool: 11,841 seed papers with >=10 resolved refs; dev=200, test=500 (seed 42)
+  test: mean 25.1 relevant refs/query; 0 queries have a duplicate copy in the corpus (excluded)
+tuning title zone weight (year filter off)
+  title_w=0.1                            NDCG@50=0.1897 R@50=0.1931 6.5ms
+  title_w=0.2                            NDCG@50=0.1954 R@50=0.2020 6.3ms
+  title_w=0.3                            NDCG@50=0.1989 R@50=0.2057 6.3ms
+  title_w=0.4                            NDCG@50=0.1972 R@50=0.2027 6.2ms
+  title_w=0.5                            NDCG@50=0.1922 R@50=0.1941 6.4ms
+choosing idf threshold (largest within 1% of no elimination)
+  idf>=0                                 NDCG@50=0.2543 R@50=0.2472 5.4ms
+  idf>=0.25                              NDCG@50=0.2543 R@50=0.2472 5.3ms
+  idf>=0.5                               NDCG@50=0.2510 R@50=0.2435 4.9ms
+  idf>=0.75                              NDCG@50=0.2494 R@50=0.2445 4.3ms
+  idf>=1.0                               NDCG@50=0.2346 R@50=0.2325 3.4ms
+  idf>=1.5                               NDCG@50=0.2026 R@50=0.1990 1.9ms
+tuning g(d) weight (in-corpus citations)
+  g_weight=0.02                          NDCG@50=0.2660 R@50=0.2596 9.7ms
+  g_weight=0.05                          NDCG@50=0.2808 R@50=0.2755 9.6ms
+  g_weight=0.1                           NDCG@50=0.2858 R@50=0.2794 9.4ms
+  g_weight=0.2                           NDCG@50=0.2574 R@50=0.2485 9.3ms
+  g_weight=0.3                           NDCG@50=0.2024 R@50=0.1937 9.2ms
+tuning co-citation (top-N, weight)
+  cc_top_n=5 cc_weight=0.05              NDCG@50=0.3098 R@50=0.3025 11.6ms
+  cc_top_n=5 cc_weight=0.1               NDCG@50=0.3272 R@50=0.3231 11.9ms
+  cc_top_n=5 cc_weight=0.2               NDCG@50=0.3349 R@50=0.3372 12.1ms
+  cc_top_n=5 cc_weight=0.4               NDCG@50=0.3169 R@50=0.3270 12.1ms
+  cc_top_n=10 cc_weight=0.05             NDCG@50=0.3064 R@50=0.2984 11.9ms
+  cc_top_n=10 cc_weight=0.1              NDCG@50=0.3221 R@50=0.3151 11.6ms
+  cc_top_n=10 cc_weight=0.2              NDCG@50=0.3371 R@50=0.3377 11.5ms
+  cc_top_n=10 cc_weight=0.4              NDCG@50=0.3301 R@50=0.3427 11.8ms
+  cc_top_n=20 cc_weight=0.05             NDCG@50=0.3029 R@50=0.2945 11.7ms
+  cc_top_n=20 cc_weight=0.1              NDCG@50=0.3161 R@50=0.3086 11.8ms
+  cc_top_n=20 cc_weight=0.2              NDCG@50=0.3304 R@50=0.3270 11.8ms
+  cc_top_n=20 cc_weight=0.4              NDCG@50=0.3344 R@50=0.3410 11.6ms
+  cc_top_n=50 cc_weight=0.05             NDCG@50=0.2983 R@50=0.2903 12.8ms
+  cc_top_n=50 cc_weight=0.1              NDCG@50=0.3066 R@50=0.2985 12.5ms
+  cc_top_n=50 cc_weight=0.2              NDCG@50=0.3194 R@50=0.3135 12.4ms
+  cc_top_n=50 cc_weight=0.4              NDCG@50=0.3249 R@50=0.3278 12.4ms
+  wrote results\tuning_log_dev.csv
+  tuned: {'title_w': 0.3, 'idf_threshold': 0.25, 'g_weight': 0.1, 'cc_top_n': 10, 'cc_weight': 0.2, 'tuned_on': '200 dev queries, objective NDCG@50'}
+done in 61s

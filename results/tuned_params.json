@@ -1,0 +1,10 @@
+{
+  "title_w": 0.3,
+  "idf_threshold": 0.25,
+  "g_weight": 0.1,
+  "cc_top_n": 10,
+  "cc_weight": 0.2,
+  "tuned_on": "200 dev queries, objective NDCG@50",
+  "bm25_k1": 3.0,
+  "bm25_b": 0.9
+}

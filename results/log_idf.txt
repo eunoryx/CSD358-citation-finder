@@ -1,0 +1,12 @@
+query pool: 11,841 seed papers with >=10 resolved refs; dev=200, test=500 (seed 42)
+  test: mean 25.1 relevant refs/query; 0 queries have a duplicate copy in the corpus (excluded)
+  idf>=0.0  keeps 100% of query terms  R@50=0.2744 NDCG@50=0.2917  9.07ms
+  idf>=0.25 keeps 100% of query terms  R@50=0.2744 NDCG@50=0.2917  9.04ms
+  idf>=0.5  keeps 94% of query terms  R@50=0.2728 NDCG@50=0.2901  8.70ms
+  idf>=0.75 keeps 83% of query terms  R@50=0.2682 NDCG@50=0.2829  7.99ms
+  idf>=1.0  keeps 65% of query terms  R@50=0.2533 NDCG@50=0.2659  7.05ms
+  idf>=1.5  keeps 31% of query terms  R@50=0.2162 NDCG@50=0.2247  5.12ms
+  idf>=2.0  keeps 15% of query terms  R@50=0.1488 NDCG@50=0.1568  3.99ms
+  wrote results\idf_threshold_test.csv
+  wrote C:\Users\mohan\citation-finder\results\idf_threshold_test.png
+done in 28s

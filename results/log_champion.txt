@@ -1,0 +1,23 @@
+query pool: 11,841 seed papers with >=10 resolved refs; dev=200, test=500 (seed 42)
+  test: mean 25.1 relevant refs/query; 0 queries have a duplicate copy in the corpus (excluded)
+  precomputing champion lists for all terms: 0.3s (one-off, offline)
+  exhaustive r=all     2.60ms  touched=   392211 cands=  47723  R@50=0.2428  overlap@50=1.000
+  approx     r=5       0.65ms  touched=      713 cands=    640  R@50=0.0487  overlap@50=0.074
+  approx     r=10      0.64ms  touched=     1401 cands=   1224  R@50=0.0610  overlap@50=0.097
+  approx     r=25      0.67ms  touched=     3384 cands=   2821  R@50=0.0801  overlap@50=0.139
+  approx     r=50      0.69ms  touched=     6514 cands=   5153  R@50=0.0958  overlap@50=0.183
+  approx     r=100     0.75ms  touched=    12317 cands=   9017  R@50=0.1195  overlap@50=0.243
+  approx     r=250     0.82ms  touched=    27713 cands=  17437  R@50=0.1513  overlap@50=0.330
+  approx     r=500     0.95ms  touched=    49463 cands=  26178  R@50=0.1731  overlap@50=0.415
+  approx     r=1000    1.16ms  touched=    86252 cands=  35677  R@50=0.1941  overlap@50=0.508
+  rescored   r=5       3.82ms  touched=    98050 cands=    640  R@50=0.0787  overlap@50=0.144
+  rescored   r=10      6.08ms  touched=   187348 cands=   1224  R@50=0.1174  overlap@50=0.237
+  rescored   r=25     11.88ms  touched=   431266 cands=   2821  R@50=0.1739  overlap@50=0.437
+  rescored   r=50     20.44ms  touched=   786423 cands=   5153  R@50=0.2066  overlap@50=0.629
+  rescored   r=100    34.35ms  touched=  1372715 cands=   9017  R@50=0.2302  overlap@50=0.809
+  rescored   r=250    64.38ms  touched=  2640539 cands=  17437  R@50=0.2416  overlap@50=0.962
+  rescored   r=500    95.72ms  touched=  3940192 cands=  26178  R@50=0.2426  overlap@50=0.996
+  rescored   r=1000  130.94ms  touched=  5326726 cands=  35677  R@50=0.2428  overlap@50=1.000
+  wrote results\champion_lists.csv
+  wrote C:\Users\mohan\citation-finder\results\champion_lists.png
+done in 399s

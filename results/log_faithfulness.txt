@@ -1,0 +1,9 @@
+query pool: 11,841 seed papers with >=10 resolved refs; dev=200, test=500 (seed 42)
+  test: mean 25.1 relevant refs/query; 0 queries have a duplicate copy in the corpus (excluded)
+  wrote results\faithfulness_rows_text.csv
+  text only (step 3): 993 results, median rank 5 -> 275 (explanation terms removed) vs 11 (random terms removed); explained hurts more in 98% (9s)
+  wrote results\faithfulness_rows_full.csv
+  full system (step 5): 977 results, median rank 5 -> 127 (explanation terms removed) vs 8 (random terms removed); explained hurts more in 96% (14s)
+  wrote results\faithfulness.csv
+  wrote C:\Users\mohan\citation-finder\results\faithfulness.png
+done in 27s

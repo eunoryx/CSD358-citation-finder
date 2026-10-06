@@ -1,0 +1,55 @@
+loaded index of 48,169 papers in 2.5s | config: Config(use_title=True, title_w=0.3, idf_threshold=0.25, year_filter=True, g_weight=0.1, g_kind='citations', cc_weight=0.2, cc_top_n=10, model='cosine', champion_r=0)
+================================================================================
+[1] preprocessing -> 38 index terms (27 distinct):
+    neural rank model ad hoc retriev deep neural network ad hoc document retriev learn relev match queri term document term unlik represent model model us histogram local interact term gate network trec collect improv bm25 queri likelihood baselin
+
+[2] zone 'title' (zone weight 0.3): ltc query vector, 27/27 terms kept by index elimination (idf >= 0.25)
+    term           tf_q      df    idf w_q (ltc)  first postings (docID:tf -> lnc w_d)
+    unlik             1       1   4.68     0.365  [45930:1->0.316, ...]
+    hoc               2      89   2.73     0.278  [4:1->0.378, 527:1->0.261, 735:1->0.447, ...]
+    bm25              1      20   3.38     0.264  [5107:1->0.447, 5728:1->0.378, 7224:1->0.333, ...]
+    histogram         1      23   3.32     0.259  [5736:1->0.408, 7554:1->0.408, 7650:1->0.500, ...]
+    us                1      31   3.19     0.249  [1410:1->0.354, 4424:1->0.408, 9166:1->0.306, ...]
+    likelihood        1      32   3.18     0.248  [10:1->0.378, 588:1->0.408, 1794:1->0.378, ...]
+    term              3     354   2.13     0.246  [145:1->0.378, 444:1->0.408, 559:1->0.316, ...]
+    ad                2     289   2.22     0.226  [4:1->0.378, 53:1->0.333, 465:1->0.378, ...]
+
+[2] zone 'abstract' (zone weight 0.7): ltc query vector, 27/27 terms kept by index elimination (idf >= 0.25)
+    term           tf_q      df    idf w_q (ltc)  first postings (docID:tf -> lnc w_d)
+    histogram         1      91   2.72     0.376  [313:1->0.122, 3167:1->0.104, 4875:1->0.098, ...]
+    hoc               2     610   1.90     0.341  [4:2->0.146, 9:1->0.134, 56:1->0.091, ...]
+    bm25              1     203   2.38     0.328  [350:1->0.100, 390:2->0.132, 630:1->0.112, ...]
+    gate              1     451   2.03     0.280  [32:1->0.116, 41:1->0.097, 135:1->0.095, ...]
+    likelihood        1     832   1.76     0.243  [10:2->0.140, 72:1->0.115, 236:1->0.114, ...]
+    ad                2   2,301   1.32     0.237  [4:2->0.146, 9:1->0.134, 39:4->0.143, ...]
+    trec              1   1,000   1.68     0.232  [9:1->0.134, 55:2->0.165, 111:1->0.129, ...]
+    unlik             1   1,212   1.60     0.221  [46:1->0.143, 79:1->0.107, 146:1->0.123, ...]
+================================================================================
+
+search took 5.8 ms
+
+ 1. [0.359] (2005) Document Quality Models for Web Ad Hoc Retrieval.
+      CIKM | AMiner id 539098dd20f70186a0e0e569
+      score = text 0.318 + g(d) 0.042 + co-citation 0.000 (cited by 0/10 top results)
+      why: hoc (21%), ad (16%), document (14%), retriev (12%), likelihood (10%)
+
+ 2. [0.351] (2003) Time-based Language Models.
+      CIKM | AMiner id 539095ba20f70186a0df0987
+      score = text 0.263 + g(d) 0.068 + co-citation 0.020 (cited by 1/10 top results)
+      why: hoc (15%), model (12%), likelihood (11%), queri (11%), ad (11%)
+
+ 3. [0.339] (2006) LDA-based Document Models for Ad-Hoc Retrieval
+      SIGIR | AMiner id 539099a220f70186a0e19208
+      score = text 0.262 + g(d) 0.077 + co-citation 0.000 (cited by 0/10 top results)
+      why: hoc (24%), ad (18%), document (16%), retriev (15%), model (9%)
+
+ 4. [0.337] (2007) Improving Weak Ad-Hoc Queries Using Wikipedia Asexternal Corpus
+      SIGIR | AMiner id 53909f2d20f70186a0e38c2a
+      score = text 0.290 + g(d) 0.046 + co-citation 0.000 (cited by 0/10 top results)
+      why: hoc (31%), ad (23%), queri (16%), improv (9%), document (8%)
+
+ 5. [0.337] (1994) Automatic Query Expansion Using SMART: TREC 3.
+      TREC | AMiner id 53e998c8b7602d970210301c
+      score = text 0.286 + g(d) 0.051 + co-citation 0.000 (cited by 0/10 top results)
+      why: trec (16%), hoc (15%), queri (14%), ad (11%), document (9%)
+

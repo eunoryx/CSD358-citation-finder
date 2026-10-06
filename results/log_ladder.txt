@@ -1,0 +1,17 @@
+query pool: 11,841 seed papers with >=10 resolved refs; dev=200, test=500 (seed 42)
+  test: mean 25.1 relevant refs/query; 0 queries have a duplicate copy in the corpus (excluded)
+  1 baseline: tf-idf, abstract only                R@50=0.1799 NDCG@50=0.1908 MRR=0.4983 5.5ms
+  2 + title zone                                   R@50=0.2044 NDCG@50=0.2152 MRR=0.5389 6.2ms
+  3 + year filter                                  R@50=0.2428 NDCG@50=0.2623 MRR=0.6443 5.2ms
+  4 + g(d) citations                               R@50=0.2744 NDCG@50=0.2917 MRR=0.6662 9.7ms
+  5 + co-citation (full system)                    R@50=0.3314 NDCG@50=0.3407 MRR=0.6690 12.2ms
+  6 BM25 (title zone + year filter)                R@50=0.2207 NDCG@50=0.2375 MRR=0.6126 8.5ms
+  7 BM25 + g(d) + co-citation                      R@50=0.3056 NDCG@50=0.3181 MRR=0.6599 15.6ms
+  x full system, g(d) = PageRank                   R@50=0.3240 NDCG@50=0.3390 MRR=0.6817 165.8ms
+  x full system, g(d) = AMiner n_citation (LEAKS)  R@50=0.3476 NDCG@50=0.3611 MRR=0.7059 8.1ms
+  x full system, NO stemming                       R@50=0.3270 NDCG@50=0.3373 MRR=0.6785
+  wrote results\ablation_ladder.csv
+  share of true references NOT older than the query (unreachable with year filter): 4.34%
+  wrote C:\Users\mohan\citation-finder\results\ablation_ladder.png
+  wrote C:\Users\mohan\citation-finder\results\recall_at_k.png
+done in 139s

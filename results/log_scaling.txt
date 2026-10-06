@@ -1,0 +1,36 @@
+pass 1 done: 6,977,085 papers with abstract+year, 19,918 seeds (98s)
+top matched venue strings (check for false matches):
+keeping 19,918 seeds + 114,311 cited papers (min_cited_by=1, cap=200,000)
+pass 2 done: wrote 128,237 papers to data/subset_200k.jsonl (73s)
+papers:                         128,237
+year range:                     1899-2026 (median 2017)
+papers with >=1 reference:      122,560 (95.6%)
+references total:               3,224,126
+references resolving in corpus: 2,090,955 (64.9%)
+papers with >= 1 resolved refs:  117,675
+papers with >= 5 resolved refs:  95,572
+papers with >=10 resolved refs:  73,225
+papers with >=20 resolved refs:  41,084
+seed papers:                    19,918; their refs resolving: 409,540/432,320 (94.7%)
+query pool: 11,841 seed papers with >=10 resolved refs; dev=200, test=500 (seed 42)
+  3 + year filter      R@50=0.2428 NDCG@50=0.2623 MRR=0.6443 5.4ms
+  5 full system        R@50=0.3314 NDCG@50=0.3407 MRR=0.6690 12.2ms
+  wrote results\scaling.csv
+done in 12s
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\mohan\citation-finder\src\eval.py", line 385, in <module>
+    ranker = build_ranker(stem_on=True, index_path=a.index)
+  File "C:\Users\mohan\citation-finder\src\rank.py", line 246, in build_ranker
+    index = InvertedIndex.load(stem_on=stem_on, path=index_path)
+  File "C:\Users\mohan\citation-finder\src\index.py", line 96, in load
+    with open(path, "rb") as f:
+         ~~~~^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'data/index_200k_stem.pkl'
+query pool: 14,116 seed papers with >=10 resolved refs; dev=200, test=500 (seed 42)
+  test: mean 27.5 relevant refs/query; 0 queries have a duplicate copy in the corpus (excluded)
+  3 + year filter      R@50=0.2132 NDCG@50=0.2366 MRR=0.6217 15.9ms
+  5 full system        R@50=0.2833 NDCG@50=0.2983 MRR=0.6469 36.3ms
+  wrote results\scaling.csv
+done in 35s

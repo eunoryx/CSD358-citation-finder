@@ -1,0 +1,7 @@
+48k: 48,169 docs, build 7.6s
+  zone title   : 15,325 terms, 321,610 postings, mean list length 21.0, longest 7,739, terms with df=1: 9,408
+  zone abstract: 49,357 terms, 3,160,516 postings, mean list length 64.0, longest 26,270, terms with df=1: 30,212
+large: 128,237 docs, build 19.9s
+  zone title   : 29,671 terms, 866,894 postings, mean list length 29.2, longest 19,128, terms with df=1: 18,836
+  zone abstract: 98,638 terms, 8,161,212 postings, mean list length 82.7, longest 62,478, terms with df=1: 62,314
+  saved data/index_large_stem.pkl (174 MB)

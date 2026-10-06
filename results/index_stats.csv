@@ -1,0 +1,5 @@
+index,zone,terms,postings,mean_postings_len,longest_list,df1_terms,build_s,pickle_MB
+stem,title,15325,321610,21.0,7739,9408,7.8,69
+stem,abstract,49357,3160516,64.0,26270,30212,7.8,69
+nostem,title,20529,323168,15.7,7596,11758,6.8,72
+nostem,abstract,66157,3448176,52.1,22248,36535,6.8,72

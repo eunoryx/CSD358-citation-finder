@@ -1,0 +1,4 @@
+pipeline,tokens,tokens_per_doc,vocab_size,df1_terms,seconds
+tokenize only,8783878,182.4,67897,37489,5.5
++ stop words,5071925,105.3,67571,37485,5.4
++ stop words + Porter,5071925,105.3,50498,31034,6.5

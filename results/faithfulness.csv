@@ -1,0 +1,3 @@
+config,results_tested,median_rank_before,median_rank_after_removing_explanation_terms,median_rank_after_removing_random_matching_terms,pct_dropped_out_of_top10_explained,pct_dropped_out_of_top10_random,pct_explained_hurts_more_than_random,pct_tie
+text only (step 3),993,5.0,275.0,11.0,0.9547,0.5096,0.9829,0.0121
+full system (step 5),977,5.0,127.0,8.0,0.8956,0.3869,0.957,0.0235
